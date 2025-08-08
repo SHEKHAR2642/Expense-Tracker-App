@@ -20,4 +20,73 @@ public class Expenses {
     private LocalDate date;
     @Column
     private String notes;
+
+    public Expenses( String title, String category, double amount, LocalDate date, String notes) {
+
+        this.title = title;
+        this.category = category;
+        this.amount = amount;
+        this.date = date;
+        this.notes = notes;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    @Override
+    public String toString() {
+        return "Expenses{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", category='" + category + '\'' +
+                ", amount=" + amount +
+                ", date=" + date +
+                ", notes='" + notes + '\'' +
+                '}';
+    }
 }
